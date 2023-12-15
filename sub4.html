@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script>
+        $(function(){
+            $(".toggle").click(function(){
+                $(".moblie_nav").slideToggle();
+            });
+        });
+    </script>
+    <title>장비대여</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+         header {
+            width: 1140px;
+            height: 65px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+        
+        }
+
+        .logo{
+            flex: 1;
+        }
+
+        header ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: 16px;
+        }
+
+        header ul a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .utility{
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .utility img{
+            margin-left: 20px;
+        }
+
+        .conA{
+            background-image: url(https://i.postimg.cc/CK0VZD2F/hero4.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 1140px;
+            height: 420px;
+            margin: 0 auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conA h1{
+            color: white;
+            font-size: 40px;
+            animation: fadeIn 1s ease-in-out;
+        } 
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .conB{
+            width: 1140px;
+            margin: 65px auto 0 auto;
+        }
+
+        .conB h2{
+            margin-bottom: 48px;
+        }
+
+        .containerB{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .box{
+            width: 266px;
+            height: 160px;
+            background-color: #F8F9FF;
+            box-sizing: border-box;
+            border-radius: 15px;
+            text-align: center;
+            padding-top: 15px;
+        }
+
+        .containerB h4{
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .containerB p{
+            font-size: 16px;
+        }
+
+        .conC{
+            width: 1140px;
+            margin: 65px auto 0 auto;
+        }
+
+        .containerC{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .circle{
+            text-align: center;
+            background-color: #366EC6;
+            width: 205px;
+            height: 205px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .circle2 p{
+        color: #F8F9FF;
+        font-size: 18px;
+        }
+
+        .circle2 p:first-child{
+            margin-bottom: 13px;
+        }
+
+        .conD{
+            width: 1140px;
+            margin: 0 auto 0 auto;
+        }
+
+        .conD h4{
+            color: #366EC6;
+            font-size: 20px;
+        }
+
+        .line{
+            margin-top: 25px;
+            margin-bottom: 25px;
+            border-top: 1px solid #7D7D7D;
+
+        }
+
+        .conD p{
+            font-size: 18px;
+            line-height: 35px;
+        }
+
+        .conD span{
+            color: #009EDF;
+        }
+
+        .containerD{
+            width: 1140px;
+            margin: 75px auto 100px auto;
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        .containerD a{
+            background-color: white;
+            border: #366EC6 2px solid ;
+            display: inline-block;
+            width: 255px;
+            height: 60px;
+            text-decoration: none;
+            color: #366EC6;
+            border: solid 2px #366EC6;
+            font-size: 20px;
+            line-height: 60px;
+            text-align: center;
+            transition: 0.2s ease-in-out;
+
+        }
+
+        .containerD a:hover{
+            background-color: #366EC6;
+            color: white;
+        }
+
+        footer{
+            width: 100%;
+            background-color: #0C2E61;
+        }
+
+        .footer-container1{
+            width: 1140px;
+            margin: 0 auto 0 auto;
+            padding-top: 34px;
+            padding-bottom: 30px;
+            display: flex;
+            gap: 35px;
+        }
+
+        .footer-container2{
+            margin-top: 15px;
+        }
+
+        .footer-container2 a{
+            gap: 25px;
+            color: #AAAFB3;
+            text-decoration: none;
+
+        }
+
+        .footer-container2 p{
+            margin-top: 10px;
+            line-height: 25px;
+            color: #AAAFB3;
+        }
+
+        .copyright{
+            display: none;
+        }
+
+        .mobile_header{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile_header ul{
+            list-style: none;
+        }
+
+        .moblie_nav{
+            float: right;
+        }
+
+        .mobile_header ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .moblie_nav ul li {
+            margin: 5px 0 5px 0;
+            text-align: right;
+        }
+
+        .mobile_header2{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mobile_header{
+            display: none;
+        }
+
+        @media (max-width: 400px){
+            header{
+                width: 390px;
+                display: none;
+            }
+
+            header ul{
+                display: none;
+            }
+
+            .utility{
+                display: none;
+            }
+
+            .conA{
+                background-image: url(https://i.postimg.cc/0NcJDR7W/hero-mobile4.png);
+                background-size: cover;
+                background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 330px;
+            height: 196px;
+            margin: 0 auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .conA h1{
+                font-size: 25px;
+            }
+
+            .containerB{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+
+            .conB{
+                width: 330px;
+                margin: 30px auto 0 auto; 
+            }
+
+            .box{
+                width: 155px;
+                height: 100px;
+                border-radius: 10px;
+            }
+
+            .box h4{
+                margin-top: 0;
+                font-size: 12px;
+            }
+
+            .box p{
+                font-size: 10px;
+                margin-bottom: 7px;
+            }
+
+            .box img{
+                width: 45px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .conB h2{
+            margin-top: 50px;
+            margin-bottom: 12px;
+            font-size: 18px;
+            }
+
+            .conC{
+                width: 330px;
+                margin: 0 auto 0 auto;
+            }
+
+            .conC h2{
+                font-size: 18px;
+                margin-top: 35px;
+                margin-bottom: 12px;
+            }
+
+            .containerC{
+                width: 330px;
+                margin: 12px auto 42px auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 7px;
+            }
+
+            .circle{
+            text-align: center;
+            background-color: #366EC6;
+            width: 57px;
+            height: 57px;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            
+        }
+
+        .circle2 p{
+        color: #F8F9FF;
+        font-size: 8px;
+        }
+
+        .circle2 p:first-child{
+            margin-bottom: 4px;
+        }
+
+        .conD{
+            width: 330px;
+            margin: 0 auto 0 auto;
+        }
+
+        .containerD{
+            width: 330px;
+            margin: 40px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        footer{
+            display: none;
+        }
+
+        .copyright{
+            display: block;
+            text-align: center;
+            margin-top: 58px;
+            font-size: 12px;
+            color: #AAAFB3;
+            margin-bottom: 33px;
+        }
+
+        .mobile_header{
+            width: 330px;
+            margin: 0 auto 0 auto;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.5);
+            
+        }
+
+        .moblie_nav{
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            z-index: 100;
+            width: 330px;
+            background-color: rgba(255, 255, 255, 0.9);
+
+        }
+
+            
+
+        }
+
+
+       
+        </style>
+</head>
+<body>
+    <header>
+        <a href="main.html" class="logo"><img src="https://i.postimg.cc/dQ4jcXWf/image.png" alt="logo" height="35px"></a>
+        <ul>
+            <a href="sub1.html"><li>센터 소개</li></a>
+            <a href="sub2.html"><li>센터 안내</li></a>
+            <a href="sub5.html"><li>시설 대관</li></a>
+            <a href="sub4.html"><li>장비 대여</li></a>
+            <a href="https://edu.kcmf.or.kr"><li>강좌 수강</li></a>
+        </ul>
+        <div class="utility">
+        <img src="https://i.postimg.cc/BQw5D8kp/login.png" alt="login" width="24px" height="24px">
+        <img src="https://i.postimg.cc/xCx87mKF/loupe.png" alt="loupe" width="24px" height="24px">
+        <img src="https://i.postimg.cc/CKJxB86L/global.png" alt="global" width="24px" height="24px">
+    </header>
+
+    <div class="mobile_header"> 
+        <div class="mobile_header2"><a href="main.html"><img src="https://i.postimg.cc/ZKWBFbY0/mobile-icon.png" alt="#" width="37px" height="25px" style="margin-top: 6px;"></a>
+        <img src="https://i.postimg.cc/QMYVWvLc/toggle1.png" alt="toggle" width="35px" class="toggle"></div>
+        <nav class="moblie_nav"><ul>
+            <li>
+              <a href="sub1.html"> 센터 소개 </a>
+            </li>
+            <li>
+                <a href="sub2.html">공지 사항  </a>
+            </li>
+            <li>
+                <a href="sub3.html">센터 새소식  </a>
+            </li>
+            <li>
+                <a href="sub4.html">장비 대여 </a>
+            </li>
+            <li>
+                <a href="sub5.html">시설 대관 </a>
+            </li> 
+            <li>
+                <a href="https://edu.kcmf.or.kr">강좌 수강</a>
+            </li> 
+        </ul></nav>
+    </div>
+
+    <section class="conA">
+        <h1>장비 대여</h1>
+    </section>
+
+    <section class="conB">
+        <h2>주요 장비 안내</h2>
+        <div class="containerB">
+        <div class="box">
+            <img src="https://i.postimg.cc/L6HppdVH/camera.png" alt="icon" width="75px">
+            <h4>5D Mark 3</h4>
+            <p>Canon EOS Mark IV</p>
+        </div>
+        <div class="box">
+            <img src="https://i.postimg.cc/L6HppdVH/camera.png" alt="icon" width="75px">
+            <h4>5D Mark 4</h4>
+            <p>Canon EOS Mark IV</p>
+        </div>
+        <div class="box">
+            <img src="https://i.postimg.cc/52hKfLMw/video.png" alt="icon" width="75px">
+            <h4>NEX-VG30H</h4>
+            <p>Canon</p>
+        </div>
+        <div class="box">
+            <img src="https://i.postimg.cc/52hKfLMw/video.png" alt="icon" width="75px">
+            <h4>AG-AC90</h4>
+            <p>Panasonic</p>
+        </div>
+        <div class="box">
+            <img src="https://i.postimg.cc/mkg8mSQG/lightbulb.png" alt="icon" width="75px">
+            <h4>FORZA 60</h4>
+            <p>NANLITE FORZA 60</p>
+        </div>
+        <div class="box">
+            <img src="https://i.postimg.cc/mkg8mSQG/lightbulb.png" alt="icon" width="75px">
+            <h4>LITEPAD LP260C</h4>
+            <p>LITEPAD</p>
+        </div>
+        <div class="box">
+            <img src="https://i.postimg.cc/52hKfLMw/video.png" alt="icon" width="75px">
+            <h4>HMX-H405</h4>
+            <p>Samsung</p>
+        </div>
+    </div>
+    </section>
+
+    <section class="conC">
+        <h2>장비 대여 절차 안내</h2>
+        <div class="containerC">
+            <div class="circle">
+                <div class="circle2"><p>01</p>
+            <p>온라인<br>
+            회원가입</p></div>
+            </div>
+            <p>→</p>
+            <div class="circle">
+                <div class="circle2"><p>02</p>
+                <p>정회원 가입<br>
+                및 교육</p></div>
+                </div>
+            <p>→</p>
+            <div class="circle">
+                <div class="circle2"><p>03</p>
+                <p>이메일 신청<br>
+                승인 여부 확인</p></div>
+                </div>
+            <p>→</p>
+            <div class="circle">
+                <div class="circle2"><p>04</p>
+                <p>시설 이용<br>
+                및 확인서 제출</p></div>
+                </div>
+            </div>
+            
+    </section>
+
+    <section class="conD">
+        <h4>정회원 시설 이용방법</h4>
+        <div class="line"></div>
+            <p>장비 대여 신청기간은 주말과 공휴일을 제외하고 2일전 17시까지 입니다.</p>
+            <p>인터넷 사용 불가능한(장애인, 노인) 경우에 한해 전화또는 방문 신청이 가능합니다.</p>
+            <p>대여, 반납 때는 신분증을 반드시 지참해야 합니다.</p>
+            <p><span>※ 인정되는 신분증 : 주민등록증, 운전면허증, 여권, 장애인 복지카드, 중 고등 청소년증, 학생증 (단, 대학교 학생증 불가)</span></p>
+            <p>미성년자의 경우 미성년자 장비대여동의서, 주민등록등본, 보호자신분증사본을 제출해야 합니다.</p> 
+            <p>기본 장비 대여 기간은 8일이며 연장 신청서 제출 시 30일까지 연장 가능합니다.</p>
+        
+
+        <h4 style="margin-top: 50px;">단체 시설신청 안내</h4>
+        <div class="line"></div>
+            <p>단체 및 기관 명의의 장비대여의 경우 비영리단체에 한합니다.</p>
+            <p>장비대여를 하고자 하는 단체는 센터 담당자와 장비의 종류, 수량 및 일정협의 후 공문접수 바랍니다.</p>
+            <p>단체 및 기관 명의의 장비대여의 경우 장비담당자와 협의 후 공문으로 신청해야 하며, 장비대여일 기준 토·일요일과 공휴일을 제외하고<br>
+            7일전까지 공문 접수하여야 합니다.</p>
+            <p>공문양식은 각 단체의 양식을 사용하며, 필수기입사항은 ①사업명  ②이용일시  ③이용목적  ④이용장비명   ⑤이용인원  ⑥담당자, 연락처<br> 
+            ⑦참가비 여부입니다. </p>
+            <p>최초 신청 시에는 비영리 단체 입증서류와 단체 소개서를 제출해야 합니다.</p>
+            <p><span>문의:  032-722-7925/ 팩스: 032-722-7990 (수신자: 인천시청자미디어센터장)
+            장비대여실 운영시간: 월~토 10:30~11:30 / 14:00~17:00</span></p>
+
+            <div class="containerD">
+                <a href="https://kcmf.or.kr/comc/doc/incheon/work_plan.hwp">작품기획서</a>
+                <a href="https://kcmf.or.kr/comc/doc/incheon/minor_equipment_rental_agreement.hwp">미성년자 대여 동의서</a>
+                <a href="https://kcmf.or.kr/comc/doc/incheon/foreigner_equipment_rental_agreement.hwp">외국인 대여 동의서</a>
+                <a href="https://kcmf.or.kr/comc/doc/incheon/extension_application.hwp">연장 신청서</a>
+            </div>
+
+
+    </section>
+
+    <div class="copyright">
+        <p>Copyright ⓒ Community Media Foundation<br>
+            All rights reserved</p>
+    </div>    
+
+    <footer>
+        <div class="footer-container1">
+            <div class="footer-icon">  <a href="#"><img src="https://i.postimg.cc/DzDt1Xzx/image.png" height="38"></a></div>
+                <div class="footer-container2">
+                    <a href="https://kcmf.or.kr/cms/footer_contents/condiciones/privacy.php" class="footer-butten">개인정보처리방침</a>
+                    <a href="https://kcmf.or.kr/cms/footer_contents/condiciones/email_x.php" class="footer-butten">이메일주소 무단수집거부</a>
+                    <a href="https://kcmf.or.kr/cms/board/board_list.php?btype=qna&menuIdx=60" class="footer-butten">고객센터</a>
+                    <p class="footer-text">(22000) 인천 연수구 인천타워대로54번길 19 T.032-722-7900 F.032-722-7990 <br>
+                        Copyright ⓒ Community Media Foundation, Some Rights Reserved
+                    </p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

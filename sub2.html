@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script>
+        $(function(){
+            $(".toggle").click(function(){
+                $(".moblie_nav").slideToggle();
+            });
+        });
+    </script>
+    <title>센터안내</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+         header {
+            width: 1140px;
+            height: 65px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+        
+        }
+
+        .logo{
+            flex: 1;
+        }
+
+        header ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: 16px;
+        }
+
+        header ul a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .utility{
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .utility img{
+            margin-left: 20px;
+        }
+
+        .conA{
+            background-image: url(https://i.postimg.cc/nrCt2r3P/hero2.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 1140px;
+            height: 420px;
+            margin: 0 auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conA h1{
+            color: white;
+            font-size: 40px;
+            animation: fadeIn 1s ease-in-out;
+        } 
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .navi{
+            display: flex;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            justify-content: center;
+            font-size: 22px;
+        }
+
+        .navi a{
+            text-decoration: none;
+        }
+
+        .conB{
+            width: 1140px;
+            margin: 0 auto 55px auto;
+        }
+
+        h2{
+            font-size: 30px;
+        }
+
+        .line1{
+            margin-top: 40px;
+            border-top: 1px solid #000000;
+            width: 100%;
+        }
+
+        .conB .containerB{
+            width: 1090px;
+            height: 110px;
+            margin: 0 auto 0 auto;
+            display: flex;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .date {
+        margin-left: auto; /* 오른쪽으로 정렬 */
+        font-size: 20px;
+        color: #959595;
+        }
+
+        .number{
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .invite{
+            box-sizing: border-box;
+            background-color: #366EC6;
+            color: #FFFFFF;
+            width: 80px;
+            padding: 8px 11px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .containerB a{
+            text-decoration: none;
+            color: #000000;
+            font-size: 20px;
+            font-weight: 700;
+            transition: 0.3s ease-in;
+        }
+
+        .containerB a:hover{
+            color: #366EC6;
+        }
+
+        .line2{
+            width: 100%;
+            border-top: 1px solid #848484;
+        }
+
+        .pagenavi{
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 95px;
+        }
+
+        .pagenavi a{
+            text-decoration: none;
+            color: #848484;
+            font-size: 20px;
+
+        }
+
+        footer{
+            width: 100%;
+            background-color: #0C2E61;
+        }
+
+        .footer-container1{
+            width: 1140px;
+            margin: 0 auto 0 auto;
+            padding-top: 34px;
+            padding-bottom: 30px;
+            display: flex;
+            gap: 35px;
+        }
+
+        .footer-container2{
+            margin-top: 15px;
+        }
+
+        .footer-container2 a{
+            gap: 25px;
+            color: #AAAFB3;
+            text-decoration: none;
+
+        }
+
+        .footer-container2 p{
+            margin-top: 10px;
+            line-height: 25px;
+            color: #AAAFB3;
+        }
+
+        .copyright{
+            display: none;
+        }
+
+        .mobile_header{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile_header ul{
+            list-style: none;
+        }
+
+        .moblie_nav{
+            float: right;
+        }
+
+        .mobile_header ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .moblie_nav ul li {
+            margin: 5px 0 5px 0;
+            text-align: right;
+        }
+
+        .mobile_header2{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mobile_header{
+            display: none;
+        }
+
+        @media (max-width: 400px){
+            header{
+                width: 390px;
+                display: none;
+            }
+
+            header ul{
+                display: none;
+            }
+
+            .utility{
+                display: none;
+            }
+
+            .conA{
+                background-image: url(https://i.postimg.cc/xj3zYQbk/hero-mobile3.png);
+                background-size: cover;
+                background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 330px;
+            height: 196px;
+            margin: 0 auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .conA h1{
+                font-size: 25px;
+            }
+
+            .navi {
+                display: none;
+            }
+
+            .conB{
+                width: 330px;
+                margin: 0 auto 45px auto;
+            }
+
+            h2{
+                margin-top: 50px;
+                font-size: 18px;
+            }
+
+            .conB .containerB .box h3{
+        margin-bottom: 5px;    
+        }
+
+        .conB .containerB{
+            width: 330px;
+            height: 132px;
+            margin: 17px auto 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .containerB a{
+            font-size: 18px;
+        }
+
+        .invite{
+            box-sizing: border-box;
+            background-color: #366EC6;
+            color: #FFFFFF;
+            width: 50px;
+            padding: 8px 11px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .date {
+            margin-top: 5px;
+        margin-left: auto; /* 오른쪽으로 정렬 */
+        font-size: 18px;
+        color: #959595;
+        }
+
+        .number{
+            display: none;
+        }
+
+        .pagenavi{
+            margin-bottom: 45px;
+        }
+
+        footer{
+            display: none;
+        }
+
+        .copyright{
+            display: block;
+            text-align: center;
+            margin-top: 58px;
+            font-size: 12px;
+            color: #AAAFB3;
+            margin-bottom: 33px;
+        }
+
+        .mobile_header{
+            width: 330px;
+            margin: 0 auto 0 auto;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.5);
+            
+        }
+
+        .moblie_nav{
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            z-index: 100;
+            width: 330px;
+            background-color: rgba(255, 255, 255, 0.9);
+
+        }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="main.html" class="logo"><img src="https://i.postimg.cc/dQ4jcXWf/image.png" alt="logo" height="35px"></a>
+        <ul>
+            <a href="sub1.html"><li>센터 소개</li></a>
+            <a href="sub2.html"><li>센터 안내</li></a>
+            <a href="sub5.html"><li>시설 대관</li></a>
+            <a href="sub4.html"><li>장비 대여</li></a>
+            <a href="https://edu.kcmf.or.kr"><li>강좌 수강</li></a>
+        </ul>
+        <div class="utility">
+        <img src="https://i.postimg.cc/BQw5D8kp/login.png" alt="login" width="24px" height="24px">
+        <img src="https://i.postimg.cc/xCx87mKF/loupe.png" alt="loupe" width="24px" height="24px">
+        <img src="https://i.postimg.cc/CKJxB86L/global.png" alt="global" width="24px" height="24px">
+    </header>
+    
+    <div class="mobile_header"> 
+        <div class="mobile_header2"><a href="main.html"><img src="https://i.postimg.cc/ZKWBFbY0/mobile-icon.png" alt="#" width="37px" height="25px" style="margin-top: 6px;"></a>
+        <img src="https://i.postimg.cc/QMYVWvLc/toggle1.png" alt="toggle" width="35px" class="toggle"></div>
+        <nav class="moblie_nav"><ul>
+            <li>
+              <a href="sub1.html"> 센터 소개 </a>
+            </li>
+            <li>
+                <a href="sub2.html">공지 사항  </a>
+            </li>
+            <li>
+                <a href="sub3.html">센터 새소식  </a>
+            </li>
+            <li>
+                <a href="sub4.html">장비 대여 </a>
+            </li>
+            <li>
+                <a href="sub5.html">시설 대관 </a>
+            </li> 
+            <li>
+                <a href="https://edu.kcmf.or.kr">강좌 수강</a>
+            </li> 
+        </ul></nav>
+    </div>
+
+    <section class="conA">
+        <h1>센터 안내</h1>
+    </section>
+
+    <div class="navi">
+        <a href="sub2.html" style="color: #000000;">공지사항</a>
+        <a href="sub3.html" style="color: #C1C1C1;">센터소식</a>
+    </div>
+
+    <section class="conB">
+        <h2>공지사항</h2>
+        <div class="line1"></div>
+        <div class="containerB">
+            <p class="number">25</p>
+            <p class="invite">공지</p>
+            <a href="https://kcmf.or.kr/comc/html/cboard/board_view.php?globalCenter=incheon&btype=incheon_notice&search_field=&search_string=&search_category=&page=&mode=v&idx=48742">인천시청자미디어센터 사무실 공사 안내</a>
+            <p class="date">2023.12.10</p>
+        </div>
+        <div class="line2"></div>
+        <div class="containerB">
+            <p class="number">24</p>
+            <p class="invite">공모</p>
+            <a href="https://kcmf.or.kr/comc/html/cboard/board_view.php?globalCenter=incheon&btype=incheon_notice&search_field=&search_string=&search_category=&page=&mode=v&idx=48878">2023 시청자미디어대상 방송영상 공모전 본선진출작 및 국민참여심사 안내</a>
+            <p class="date">2023.12.01</p>
+        </div>
+        <div class="line2"></div>
+        <div class="containerB">
+            <p class="number">23</p>
+            <p class="invite">모집</p>
+            <a href="https://kcmf.or.kr/comc/html/cboard/board_view.php?globalCenter=incheon&btype=incheon_notice&search_field=&search_string=&search_category=&page=&mode=v&idx=48692"> 라이브커머스 청년인력 양성과정 참여자 모집</a>
+            <p class="date">2023.11.30</p>
+        </div>
+        <div class="line2"></div>
+        <div class="containerB">
+            <p class="number">22</p>
+            <p class="invite">공모</p>
+            <a href="https://kcmf.or.kr/comc/html/cboard/board_view.php?globalCenter=incheon&btype=incheon_notice&search_field=all&search_string=&search_category=&page=2&mode=v&idx=48572"> 제 5회 미디어교육 우수사례 공모전</a>
+            <p class="date">2023.11.28</p>
+        </div>
+        <div class="line2"></div>
+        <div class="containerB">
+            <p class="number">21</p>
+            <p class="invite">모집</p>
+            <a href="https://kcmf.or.kr/comc/html/cboard/board_view.php?globalCenter=incheon&btype=incheon_notice&search_field=all&search_string=&search_category=&page=1&mode=v&idx=49089">라이브 커머스 특강 수강생 모집</a>
+            <p class="date">2023.11.26</p>
+        </div>
+        <div class="line2"></div>    
+    </section>
+    
+    <div class="pagenavi">
+            <a href="#" style="color: black;">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright ⓒ Community Media Foundation<br>
+                All rights reserved</p>
+        </div>    
+
+        <footer>
+            <div class="footer-container1">
+                <div class="footer-icon">  <a href="#"><img src="https://i.postimg.cc/DzDt1Xzx/image.png" height="38"></a></div>
+                    <div class="footer-container2">
+                        <a href="https://kcmf.or.kr/cms/footer_contents/condiciones/privacy.php" class="footer-butten">개인정보처리방침</a>
+                        <a href="https://kcmf.or.kr/cms/footer_contents/condiciones/email_x.php" class="footer-butten">이메일주소 무단수집거부</a>
+                        <a href="https://kcmf.or.kr/cms/board/board_list.php?btype=qna&menuIdx=60" class="footer-butten">고객센터</a>
+                        <p class="footer-text">(22000) 인천 연수구 인천타워대로54번길 19 T.032-722-7900 F.032-722-7990 <br>
+                            Copyright ⓒ Community Media Foundation, Some Rights Reserved
+                        </p>
+                </div>
+            </div>
+        </footer>
+</body>
+</html>

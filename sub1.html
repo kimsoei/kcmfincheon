@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+   <script>
+        $(function(){
+            $(".toggle").click(function(){
+                $(".moblie_nav").slideToggle();
+            });
+        });
+    </script>
+    <title>센터소개</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+         header {
+            width: 1140px;
+            height: 65px;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            align-items: center;
+        
+        }
+
+        .logo{
+            flex: 1;
+        }
+
+        header ul{
+            list-style: none;
+            display: flex;
+            gap: 30px;
+            font-size: 16px;
+        }
+
+        header ul a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .utility{
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .utility img{
+            margin-left: 20px;
+        }
+
+        .conA{
+            background-image: url(https://i.postimg.cc/9M5HfQcF/hero1.png);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 1140px;
+            height: 420px;
+            margin: 0 auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .conA h1{
+            color: white;
+            font-size: 40px;
+            animation: fadeIn 1s ease-in-out;  
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        h1{
+            font-size: 40px;
+        }
+
+        .conB{
+            width: 1140px;
+            margin: 0 auto 0 auto;
+        }
+
+
+        .conB .containerB{
+            display: flex;
+            gap: 25px;
+            margin-bottom: 80px;
+        }
+
+        .conB .containerB .box{
+            width: 363px;
+            height: 242px;
+            box-sizing: border-box;
+            background-color: #F8F9FF;
+            border-radius: 20px;
+            padding: 30px;
+
+            
+        }
+
+        .conB .containerB .box img{
+           float: right;
+        }
+
+        .conB .containerB .box h3{
+           font-size: 26px;
+           margin-bottom: 10px;
+        }
+
+        .conB .containerB .box p{
+           font-size: 18px;
+           line-height: 26px;
+           margin: 0;
+           padding: 0;
+        }
+
+        .conC{
+            background-color: #E8EEF7;
+        }
+
+        .containerC{
+            width: 1140px;
+            margin: 0 auto 0 auto;
+            padding: 116px 0 116px 0;
+            display: flex;
+            gap: 25px;
+        }
+
+        .conC .containerC .text{
+            width: 535px;
+        }
+
+        .conC .containerC .text h3{
+            font-size: 26px;
+            margin-bottom: 20px;
+        }
+
+        .conC .containerC .text span{
+            color: #366EC6;
+        }
+
+        .conC .containerC .text p{
+            font-size: 20px;
+            line-height: 33.5px;
+            color: #434343;
+        }
+
+        h2{
+            font-size: 30px;
+        }
+
+        .conD{
+            margin-top: 80px;
+            width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .containerD {
+            display: flex;
+            justify-content: flex-start;
+            gap: 165px;
+            margin-bottom: 80px;
+        }
+
+        .conD h2{
+            margin-bottom: 20px;
+        }
+
+        .conD h1{
+            margin-bottom: 70px;
+        }
+
+        .line{
+            border-top: 1px solid #000000;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: flex-start;
+            gap: 390px;
+        }
+
+        .point {
+        position: relative;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px; /* 지름이 20px인 원의 너비 */
+        height: 16px; /* 지름이 20px인 원의 높이 */
+        background-color: #424242; /* 원의 색상 */
+        border-radius: 50%; /* 원형으로 만들기 */
+        }
+
+        .conD .containerD .box2 .box3{
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .conD .containerD .box2 h4{
+            color: #366EC6;
+            font-size: 30px;
+        }
+
+        .conD .containerD .box2 .box3 h5{
+            font-size: 20px;
+        }
+
+        .conD .containerD .box2 .box3 p{
+            font-size: 20px;
+        }
+        
+        .conE{
+            width: 1140px;
+            margin: 0 auto 0 auto;
+        }
+
+        .map{
+            margin-top: 40px;
+            margin-bottom: 24px;
+        }
+
+        .containerE{
+            display: flex;
+            gap: 35px;
+            margin-bottom: 150px;
+        }
+
+        .containerE .title h6{
+            font-size: 28px;
+        }
+
+        .containerE .box6{
+            display: flex;
+            gap: 26px;
+        }
+
+        .containerE .box6:not(:first-child){
+            margin-top: 13px;
+        }
+
+        .title2{
+            color: #366EC6;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .text{
+            font-size: 20px;
+        }
+
+        footer{
+            width: 100%;
+            background-color: #0C2E61;
+        }
+
+        .footer-container1{
+            width: 1140px;
+            margin: 0 auto 0 auto;
+            padding-top: 34px;
+            padding-bottom: 30px;
+            display: flex;
+            gap: 35px;
+        }
+
+        .footer-container2{
+            margin-top: 15px;
+        }
+
+        .footer-container2 a{
+            gap: 25px;
+            color: #AAAFB3;
+            text-decoration: none;
+
+        }
+
+        .footer-container2 p{
+            margin-top: 10px;
+            line-height: 25px;
+            color: #AAAFB3;
+        }
+
+        .conB p{
+            margin-bottom: 40px; 
+            font-size: 24px;
+        }
+
+        .copyright{
+            display: none;
+        }
+
+        .mobile_header{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mobile_header ul{
+            list-style: none;
+        }
+
+        .moblie_nav{
+            float: right;
+        }
+
+        .mobile_header ul li a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .moblie_nav ul li {
+            margin: 5px 0 5px 0;
+            text-align: right;
+        }
+
+        .mobile_header2{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .mobile_header{
+            display: none;
+        }
+
+        @media (max-width: 400px){
+            header{
+                width: 390px;
+                display: none;
+            }
+
+            header ul{
+                display: none;
+            }
+
+            .utility{
+                display: none;
+            }
+
+            .conA{
+                background-image: url(https://i.postimg.cc/zfqK6VVd/mobile-hero2.png);
+                background-size: cover;
+                background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            width: 330px;
+            height: 196px;
+            margin: 0 auto 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            }
+
+            .conA h1{
+                font-size: 25px;
+            }
+
+            .conB{
+                width: 330px;
+                margin: 0 auto 0 auto;
+            }
+
+            h2{
+                font-size: 20px;
+            }
+
+            .conB p{
+                font-size: 15px;
+            }
+
+            .containerB{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 330px;
+            }
+
+            .conB .containerB .box{
+                width: 330px;
+            }
+
+            .conC{
+                width: 100%;
+            }
+
+            .containerC{
+                width: 330px;
+                margin: 0 auto 0 auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding: 35px 0 35px 0;
+                gap: 0px;
+            }
+
+            .containerC img{
+                width: 330px;
+                margin-bottom: 22px;
+            }
+
+            .conC .containerC .text{
+                width: 325px;
+            }
+
+            .conC .containerC .text h3{
+                font-size: 18px;
+            }
+
+            .conC .containerC .text p{
+                font-size: 12px;
+                line-height: 22px;
+            }
+
+            .conD{
+                width: 330px;
+                margin: 0 auto 0 auto;
+            }
+
+            .conD h1{
+                font-size: 20px;
+                margin-bottom: 52px;
+            }
+
+            .conD h2{
+                margin-top: 52px;
+            }
+
+            .line{
+                display: none;
+            }
+
+            .containerD{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 25px;
+            }
+
+            .conE{
+                width: 330px;
+                margin: 0 auto 0 auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .map iframe{
+                width: 330px;
+                height: 459px;
+                margin-left: 15px;
+            }
+
+            .containerE{
+                width: 330px;
+                margin: 0 auto 0 auto;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .containerE .box6{
+                gap: 25px;
+            }
+
+            .containerE .title h6{
+                font-size: 18px;
+            }
+
+            .title2{
+                font-size: 14px;
+                width: 90px;
+            }
+
+            .text{
+                font-size: 14px;
+            }
+
+            footer{
+                display: none;
+            }
+
+            .copyright{
+            display: block;
+            text-align: center;
+            margin-top: 58px;
+            font-size: 12px;
+            color: #AAAFB3;
+            margin-bottom: 33px;
+        }
+
+        .mobile_header{
+            width: 330px;
+            margin: 0 auto 0 auto;
+            padding-top: 20px;
+            padding-bottom: 10px;
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            background-color: rgba(255, 255, 255, 0.5);
+            
+        }
+
+        .moblie_nav{
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 0;
+            z-index: 100;
+            width: 330px;
+            background-color: rgba(255, 255, 255, 0.9);
+
+        }
+
+
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <a href="main.html" class="logo"><img src="https://i.postimg.cc/dQ4jcXWf/image.png" alt="logo" height="35px"></a>
+        <ul>
+            <a href="sub1.html"><li>센터 소개</li></a>
+            <a href="sub2.html"><li>센터 안내</li></a>
+            <a href="sub5.html"><li>시설 대관</li></a>
+            <a href="sub4.html"><li>장비 대여</li></a>
+            <a href="https://edu.kcmf.or.kr"><li>강좌 수강</li></a>
+        </ul>
+        <div class="utility">
+        <img src="https://i.postimg.cc/BQw5D8kp/login.png" alt="login" width="24px" height="24px">
+        <img src="https://i.postimg.cc/xCx87mKF/loupe.png" alt="loupe" width="24px" height="24px">
+        <img src="https://i.postimg.cc/CKJxB86L/global.png" alt="global" width="24px" height="24px">
+    </header>
+
+    <div class="mobile_header"> 
+        <div class="mobile_header2"><a href="main.html"><img src="https://i.postimg.cc/ZKWBFbY0/mobile-icon.png" alt="#" width="37px" height="25px" style="margin-top: 6px;"></a>
+        <img src="https://i.postimg.cc/QMYVWvLc/toggle1.png" alt="toggle" width="35px" class="toggle"></div>
+        <nav class="moblie_nav"><ul>
+            <li>
+              <a href="sub1.html"> 센터 소개 </a>
+            </li>
+            <li>
+                <a href="sub2.html">공지 사항  </a>
+            </li>
+            <li>
+                <a href="sub3.html">센터 새소식  </a>
+            </li>
+            <li>
+                <a href="sub4.html">장비 대여 </a>
+            </li>
+            <li>
+                <a href="sub5.html">시설 대관 </a>
+            </li> 
+            <li>
+                <a href="https://edu.kcmf.or.kr">강좌 수강</a>
+            </li> 
+        </ul></nav>
+    </div>
+
+    <section class="conA">
+        <h1>센터 소개</h1>
+    </section>
+
+    <section class="conB">
+        <h2 style="margin-top: 70px; margin-bottom: 20px;">사업 소개</h2>
+        <p>시청자미디어재단은 미디어 이용자의 권익 증진과 건강한 미디어 생태계를 구축해갑니다.</p>
+        <div class="containerB">
+            <div class="box">
+                <h3>미디어 교육</h3>
+                <p>지역민들이 손쉽게 영상 촬영,<br>
+                    편집 등을 배울 수 있습니다.</p>
+                <img src="https://i.postimg.cc/SszmRNnW/school-FILL0-wght300-GRAD0-opsz48.png" width="90px" height="90px" alt="icon">
+            </div>
+
+            <div class="box">
+                <h3>장비시설 대여</h3>
+                <p>다양한 방송장비 대여를 통해<br>
+                    시청자들의 영상제작 활동을 지원합니다.</p>
+                <img src="https://i.postimg.cc/3R8K4JRL/key-FILL0-wght300-GRAD0-opsz48.png" width="90px" height="90px" alt="icon">
+            </div>
+
+            <div class="box">
+                <h3>기획 행사 및 제작 지원</h3>
+                <p>지역민들이 미디어를 통해<br>
+                    더 즐거운 삶을 살아가도록 합니다.</p>
+                <img src="https://i.postimg.cc/Cx97xzvg/event-FILL0-wght300-GRAD0-opsz48.png" width="90px" height="90px" alt="icon">
+            </div>
+        </div>
+        <h2 style="margin-bottom: 40px;">센터장 인사말</h2>
+    </section>
+
+    <section class="conC">
+        <div class="containerC">
+            <img src="https://i.postimg.cc/wjGpZqd8/image.jpg" alt="img" width="558px">
+            <div class="text">
+                <h3>시청자미디어재단 인천시청자미디어센터는<br> 
+                <span>언제나 시청자 여러분과 함께</span>합니다.</h3>
+                <p style="margin-bottom: 25px;">인천은 방송 황무지입니다. 방송문화가 척박한 대한민국 유일의<br>
+                    대도시입니다. 인천시청자미디어센터는 방송 황무지 인천을 <br>
+                    시청자 참여의 중심지로 변화시키는 초석이 되고자 합니다.<br>
+                    변화는 그리 멀리 있어 보이지 않습니다. 인천시청자미디어센터는 <br>
+                    누구에게나 열려있는 미디어 놀이터 입니다. <br>
+                    유치원생부터 노년층까지, 장애인이나 다문화 가정이나 <br>
+                    할 것 없이 전 계층을 아울러 미디어로 재미있게 놀고 체험 하는 <br>
+                    곳이 될 수 있도록 힘쓰겠습니다. </p>
+                <p>인천 시청자미디어센터장 최지안</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="conD">
+        <h2>연혁</h2>
+        <h1>인천시청자미디어센터의 발자취를 소개합니다</h1>
+        <div class="line">
+            <div class="point"></div>
+            <div class="point"></div>
+            <div class="point"></div>
+        </div>
+        <div class="containerD">
+            <div class="box2">
+                <h4>2020</h4>
+                <div class="box3">
+                    <h5>12</h5>
+                    <p>진로교육 활성화 부총리 겸 <br>
+                        교육부장관 표창장 수상</p>
+            </div>
+            <div class="box3">
+                <h5>10</h5>
+                <p>최지안 센터장 부임</p>
+        </div>
+        </div>
+
+        <div class="box2">
+            <h4>2019</h4>
+            <div class="box3">
+                <h5>12</h5>
+                <p>진로교육 활성화 부총리 겸 <br>
+                    교육부장관 표창장 수상</p>
+        </div>
+        <div class="box3">
+    </div>
+    </div>
+
+    <div class="box2">
+        <h4>2015</h4>
+        <div class="box3">
+            <h5>5</h5>
+            <p>방송통신위원회<br>
+                이용자만족도 조사 1위<br>
+            </p>
+    </div>
+    <div class="box3">
+</div>
+</div>
+        </div>
+    </section>
+
+    <section class="conE">
+        <h2>오시는 길</h2>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.429862602863!2d126.64390897435773!3d37.379665272087614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357b76536655e4f3%3A0x4141116ac94964a!2z7J247LKc7Iuc7LKt7J6Q66-465SU7Ja07IS87YSw!5e0!3m2!1sko!2skr!4v1702207558713!5m2!1sko!2skr" width="1140px" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="containerE">
+            <div class="title">
+                <h6>인천시청자미디어센터</h6>
+            </div>
+            <div class="box5">
+                <div class="box6"><p class="title2">주소</p>
+                <p class="text">인천 연수구 인천타워대로54번길 19 송도 복합문화센터 3,4층</p></div>
+                <div class="box6"><p class="title2">전화</p>
+                <p class="text">032-722-7900</p></div>
+                <div class="box6"><p class="title2">주변 지하철</p>
+                <p class="text">인천 1호선 지식정보단지역, 인천대입구역</p></div>
+                <div class="box6"><p class="title2">주변 버스정류장</p>
+                <p class="text">웰카운티, 웰카운티 4단지</p></div>
+            </div>
+            
+        </div>
+        <div class="copyright">
+            <p>Copyright ⓒ Community Media Foundation<br>
+                All rights reserved</p>
+        </div>       
+    </section>
+
+    <footer>
+        <div class="footer-container1">
+            <div class="footer-icon">  <a href="#"><img src="https://i.postimg.cc/DzDt1Xzx/image.png" height="38"></a></div>
+                <div class="footer-container2">
+                    <a href="https://kcmf.or.kr/cms/footer_contents/condiciones/privacy.php" class="footer-butten">개인정보처리방침</a>
+                    <a href="https://kcmf.or.kr/cms/footer_contents/condiciones/email_x.php" class="footer-butten">이메일주소 무단수집거부</a>
+                    <a href="https://kcmf.or.kr/cms/board/board_list.php?btype=qna&menuIdx=60" class="footer-butten">고객센터</a>
+                    <p class="footer-text">(22000) 인천 연수구 인천타워대로54번길 19 T.032-722-7900 F.032-722-7990 <br>
+                        Copyright ⓒ Community Media Foundation, Some Rights Reserved
+                    </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
